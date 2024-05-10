@@ -35,18 +35,18 @@ const io = new Server(server);
 let onlineClients = {};
 
 //database stuff
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_HOST = process.env.DB_HOST;
-const DB_PORT = process.env.DB_PORT;
+// const DB_USERNAME = process.env.DB_USERNAME;
+// const DB_PASSWORD = process.env.DB_PASSWORD;
+// const DB_HOST = process.env.DB_HOST;
+// const DB_PORT = process.env.DB_PORT;
 
-const pool = mysql.createPool({
-  connectionLimit: 100,
-  database: "name",
-  user: DB_USERNAME,
-  password: DB_PASSWORD,
-  host: DB_HOST
-});
+// const pool = mysql.createPool({
+//   connectionLimit: 100,
+//   database: "_",
+//   user: DB_USERNAME,
+//   password: DB_PASSWORD,
+//   host: DB_HOST
+// });
 
 //defining security functions
 async function argonHash(password) {
@@ -116,3 +116,9 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("trust proxy", 1);
 //app.use('/vcServer', VCPeerServer);
+
+app.get()
+
+app.listen(PORT, () => {
+  console.log("Listening on port " + PORT)
+})
