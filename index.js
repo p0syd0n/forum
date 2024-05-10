@@ -117,7 +117,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set("trust proxy", 1);
 //app.use('/vcServer', VCPeerServer);
 
-app.get()
+//test
 
 app.listen(PORT, () => {
   console.log("Listening on port " + PORT)
